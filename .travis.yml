@@ -4,7 +4,7 @@ services:
     - docker
 
 install:
-    - ./scripts/dev.sh
+    - docker-compose up -d
     - docker-compose exec php composer install
 
 script:
