@@ -1,7 +1,11 @@
-language: node_js
+language: php
+
+services:
+    - docker
+
 install:
-    - npm install
-before_script:
-    - npm run build
+    - ./scripts/dev.sh
+    - docker-compose exec php composer install
+
 script:
-    - npm run test
+    - docker-compose exec php ./vendor/bin/phpunit
