@@ -1,0 +1,10 @@
+version: "3"
+services:
+    php:
+        build: ./
+        tty: true
+        working_dir: /home/app
+        volumes:
+            - ./:/home/app
+        environment:
+            COMPOSER_CACHE_DIR: /home/.composer
