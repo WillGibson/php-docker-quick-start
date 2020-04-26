@@ -1,6 +1,6 @@
 {
     "name": "will/php-docker-quick-start",
-    "require": {},
+    "version": "1.0.0",
     "require-dev": {
         "fzaninotto/faker": "^1.9",
         "phpunit/phpunit": "^9"
