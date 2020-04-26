@@ -1,4 +1,4 @@
-import { Example } from './Example/Example';
+<?php declare(strict_types=1);
 
 const example: Example = new Example('ABC', 123);
 

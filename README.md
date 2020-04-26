@@ -14,9 +14,14 @@ It is envisaged that you would copy the files into a new project/repository then
 
     ./scripts/dev.sh
 
+You can use the following options...
+
+    --build-image          Forces rebuild of the Docker image
+    --recreate-containers  Forces recreation of the Docker container
+
 That will leave you at a shell prompt in the container where you can run this one liner to get cracking...
 
-    npm install && npm run build && npm run test && node .
+    composer install && ./vendor/bin/phpunit && node .
 
 ## Exit and take down
 
@@ -28,19 +33,13 @@ Exit the container then....
 
 From shell prompt in the container...
 
-    npm install
-    
-## Build
-
-From shell prompt in the container...
-
-    npm run build
+    composer install
     
 ## Run tests
 
 From shell prompt in the container having run the build command...
 
-    npm run test
+    ./vendor/bin/phpunit
     
 ## Run the app
 

@@ -3,8 +3,10 @@ services:
     php:
         build: ./
         tty: true
-        user: "www-data"
+#        user: "www-data"
         working_dir: /home/app
         volumes:
             - ./:/home/app
 #        command: ""
+        environment:
+            COMPOSER_CACHE_DIR: /home/.composer

@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 
-if [ "$1" == "--build-image" ]; then
+arguments="$*"
+dockerComposeArgs=""
 
-   # rm -rf ./PhpStorm2016.3
-   # cp -R ~/Library/Preferences/PhpStorm2016.3 ./PhpStorm2016.3
-
-   git add -A
-   git commit -m "Automatic commit $NOW"
-   git push
-   echo $DATE > $LAST_COMMIT_FILE
-
+if [[ "$arguments" == *"--build-image"* ]]; then
+   dockerComposeArgs="$dockerComposeArgs --build"
 fi
 
-docker-compose up -d
+if [[ "$arguments" == *"--recreate-containers"* ]]; then
+   dockerComposeArgs="$dockerComposeArgs --force-recreate"
+fi
+
+docker-compose up -d $dockerComposeArgs
 docker-compose exec php bash
