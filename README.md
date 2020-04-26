@@ -21,7 +21,7 @@ You can use the following options...
 
 That will leave you at a shell prompt in the container where you can run this one liner to get cracking...
 
-    composer install && ./vendor/bin/phpunit && node .
+    composer install && ./vendor/bin/phpunit && php ./src/app.php
 
 ## Exit and take down
 
@@ -45,4 +45,4 @@ From shell prompt in the container having run the build command...
 
 From shell prompt in the container having run the build command...
 
-    node .
+    php ./src/app.php

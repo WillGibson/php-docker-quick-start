@@ -1,5 +1,11 @@
 <?php declare(strict_types=1);
 
-const example: Example = new Example('ABC', 123);
+namespace App;
 
-console.log(example.returnConcatenatedProperties());
+use App\Example\Example;
+
+require_once ('vendor/autoload.php');
+
+$example = new Example('ABC', 123);
+
+echo $example->returnConcatenatedProperties() .PHP_EOL;

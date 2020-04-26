@@ -9,3 +9,4 @@ install:
 
 script:
     - docker-compose exec php ./vendor/bin/phpunit
+    - php ./src/app.php
