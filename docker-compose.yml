@@ -1,0 +1,10 @@
+version: "3"
+services:
+    php:
+        build: ./
+        tty: true
+        user: "www-data"
+        working_dir: /home/app
+        volumes:
+            - ./:/home/app
+#        command: ""
