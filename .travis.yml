@@ -1,11 +1,9 @@
-language: php
-
 services:
     - docker
 
 install:
     - docker-compose up -d
-    - docker-compose exec php -v
+    - docker-compose exec php php -v
     - docker-compose exec php composer install
 
 script:
