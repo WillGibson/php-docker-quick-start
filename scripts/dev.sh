@@ -14,4 +14,5 @@ if [[ "$arguments" == *"--recreate-containers"* ]]; then
 fi
 
 docker-compose up -d $dockerComposeArgs
+docker-compose exec php php -v
 docker-compose exec php bash
